@@ -2,10 +2,10 @@
 session_start();
 if(isset($_GET['type'])){
     if($_GET['type'] = "add"){
-        $value = $_GET['item'];
-        $sessVal = str_replace(" ", "", $_GET['item']);
+        $boodschappen = $_GET['item'];
+        $boodschappen_toevoegen = str_replace(" ", "", $_GET['item']);
 
-        $_SESSION[$sessVal] = $value;
+        $_SESSION[$boodschappen_toevoegen] = $boodschappen;
 
     }
 }
