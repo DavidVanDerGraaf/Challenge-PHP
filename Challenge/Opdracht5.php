@@ -19,7 +19,7 @@ if(isset($_GET['type'])){
 
 <head>
     <meta charset="UTF-8">
-    <title>Opdracht4</title>
+    <title>Opdracht5</title>
 </head>
 
 <body>
