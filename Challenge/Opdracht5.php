@@ -8,6 +8,10 @@ if(isset($_GET['type'])){
         $_SESSION[$boodschappen_toevoegen] = $boodschappen;
 
     }
+
+    else if($_GET['type'] == "delete"){
+        unset($_SESSION[$_GET['item']]);
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -26,8 +30,8 @@ if(isset($_GET['type'])){
 </form>
 <ul>
     <?php
-    foreach($_SESSION as $boodschap){
-        echo "<li>".$boodschap."</li>";
+    foreach($_SESSION as $verwijderen => $boodschap){
+        echo "<a href='Opdracht5.php?item=".$verwijderen."&type=delete'></a><li>".$boodschap."</li>";
     }
     ?>
 </ul>
