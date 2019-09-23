@@ -20,7 +20,7 @@ if(isset($_GET['type'])){
 
 <body>
 <form method="get">
-    <input type="text" name="item">
+    <input type="text" name="item" required>
     <input type="hidden" name="type" value="add">
     <input type="submit">
 </form>
