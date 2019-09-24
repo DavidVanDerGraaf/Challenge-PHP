@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_GET['type'])){
-    if($_GET['type'] = "add"){
+    if($_GET['type'] == "add"){
         $boodschappen = $_GET['item'];
         $boodschappen_toevoegen = $_GET['item'];
         $boodschappen_toevoegen = str_replace(" ", "", $boodschappen_toevoegen);
@@ -31,7 +31,7 @@ if(isset($_GET['type'])){
 <ul>
     <?php
     foreach($_SESSION as $verwijderen => $boodschap){
-        echo "<a href='Opdracht5.php?item=".$verwijderen."&type=delete'></a><li>".$boodschap."</li>";
+        echo "<a href='?item=".$verwijderen."&type=delete'><li>".$boodschap."</li></a>";
     }
     ?>
 </ul>
